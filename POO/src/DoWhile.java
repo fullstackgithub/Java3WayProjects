@@ -5,7 +5,7 @@ public class DoWhile {
         int i = 1;
         String res = "";
 
-        do{
+        do{ // faça
             res += "\nO quadrado de " + i + " é " + (i * i);
             i++;
 
