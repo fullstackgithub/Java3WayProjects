@@ -1,3 +1,5 @@
+package Aula01_05;
+
 import static javax.swing.JOptionPane.showInputDialog;
 
 public class Arrays {

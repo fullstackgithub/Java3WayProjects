@@ -1,3 +1,5 @@
+package Aula01_05;
+
 import static javax.swing.JOptionPane.*;
 
 public class Tabuada {
@@ -13,7 +15,7 @@ public class Tabuada {
             for(int i = 1; i <= 10; i++){
                 res += numero + " x " + i + " = " + (numero * i) + "\n";
             }
-            showMessageDialog(null, res, "Tabuada de " + numero, WARNING_MESSAGE);
+            showMessageDialog(null, res, "Aula01_05.Tabuada de " + numero, WARNING_MESSAGE);
 
             exit = Integer.parseInt(showInputDialog(null, "Deseja continuar? Sim <0> Não <99>", "SAÍDA", ERROR_MESSAGE));
 
