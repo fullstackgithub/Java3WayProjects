@@ -24,5 +24,24 @@ public class Dimensional {
 
 
         }while(sala.getOpc() != 99);
+
+        Area cozinha = new Area(3.45, 4.15);
+        System.out.println(cozinha.calcular());
+
+
+        System.out.println("-------------------------- Volume ----------------------------");
+
+        Volume piscina = new Volume();
+
+        System.out.print("Digite o valor para a largura: ");
+        piscina.setLargura(scan.nextDouble());
+
+        System.out.print("Digite o valor para o comprimento: ");
+        piscina.setComprimento(scan.nextDouble());
+
+        System.out.print("Digite o valor para o altura: ");
+        piscina.setAltura(scan.nextDouble());
+
+        System.out.println(piscina.calcular());
     }
 }

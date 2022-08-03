@@ -4,7 +4,7 @@ import java.text.DecimalFormat;
 
 public class Area {
 
-    private DecimalFormat df = new DecimalFormat("#,##0.00");
+    protected DecimalFormat df = new DecimalFormat("#,##0.00");
     private double largura;
     private double comprimento;
 
@@ -13,6 +13,11 @@ public class Area {
 
     public Area(){
 
+    }
+
+    public Area(double largura, double comprimento){
+        this.largura = largura;
+        this.comprimento = comprimento;
     }
 
     public double getLargura() {
