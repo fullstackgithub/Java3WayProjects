@@ -38,8 +38,11 @@ body {
 
 .imoveis .botao {
     text-decoration: none;
-    background-color: tomato;
+    background-color: teal;
     color: #FFFFFF;
     padding: 10px 15px;
     border-radius: 5px;
+
 }
+
+
