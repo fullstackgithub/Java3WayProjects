@@ -23,3 +23,16 @@
 hs_err_pid*
 
 POO/out/
+
+AppWeb/.gitignore
+
+.idea/
+
+.project
+
+Servers/
+
+../../q
+
+../../tatus
+
