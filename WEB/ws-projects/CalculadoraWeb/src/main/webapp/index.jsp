@@ -11,7 +11,7 @@
 	<div class="card">
 		<h5 class="card-header">Calculadora Web</h5>
 		<div class="card-body">
-			<form action="">
+			<form action="CalculadoraSV">
 
 				<div class="form-row">
 					
