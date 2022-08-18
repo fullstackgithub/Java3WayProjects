@@ -22,7 +22,7 @@ public class CategoriaService {
 		return repository.save(categoria);
 	}
 
-	public void delete(Long id) {
+	public void deleteById(Long id) {
 		repository.deleteById(id);
 	}
 
@@ -30,7 +30,7 @@ public class CategoriaService {
 		return repository.findAll(Sort.by(Sort.Direction.ASC, "nome"));
 	}
 
-	public Optional<Categoria> findAll(Long id){
+	public Optional<Categoria> findById(Long id){
 		return repository.findById(id);
 	}
 
