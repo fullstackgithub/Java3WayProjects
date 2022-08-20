@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.vendas.entity.Categoria;
 import com.vendas.service.CategoriaService;
 
+import io.swagger.annotations.ApiOperation;
+
 
 @RestController
 @RequestMapping("/vendas-api")
@@ -25,26 +27,31 @@ public class CategoriaController {
 	private CategoriaService service;
 	
 	@PostMapping("/categoria")
+	@ApiOperation(value = "Salva a categoria")
 	public Categoria salvar(@RequestBody Categoria categoria) {
 		return service.saveOrUpdate(categoria);
 	}
 	
 	@GetMapping("/categorias")
+	@ApiOperation(value = "Lista as categorias")
 	public List<Categoria> listar(){
 		return service.findAll();
 	}
 	
 	@GetMapping("/categoria/{id}")
+	@ApiOperation(value = "Retorna a categoria através do id")	
 	public Optional<Categoria> getCategoria(@PathVariable(value = "id") Long id){
 		return service.findById(id);
 	}
 	
 	@PutMapping("/categoria")
+	@ApiOperation(value = "Altera a categoria")
 	public Categoria alterar(@RequestBody Categoria categoria) {
 		return service.saveOrUpdate(categoria);
 	}
 	
 	@DeleteMapping("/categoria/{id}")
+	@ApiOperation(value = "Delelta a categoria através do id")
 	public void deletar(@PathVariable(value = "id") Long id) {
 		service.deleteById(id);
 	}

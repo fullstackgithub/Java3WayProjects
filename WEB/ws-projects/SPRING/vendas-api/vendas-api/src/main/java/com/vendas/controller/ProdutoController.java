@@ -17,6 +17,8 @@ import com.vendas.entity.Categoria;
 import com.vendas.entity.Produto;
 import com.vendas.service.ProdutoService;
 
+import io.swagger.annotations.ApiOperation;
+
 
 @RestController
 @RequestMapping("/vendas-api")
@@ -26,26 +28,31 @@ public class ProdutoController {
 	private ProdutoService service;
 	
 	@PostMapping("/produto")
+	@ApiOperation(value = "Inclui um novo produto")
 	public Produto salvar(@RequestBody Produto produto) {
 		return service.saveOrUpdate(produto);
 	}
 	
 	@GetMapping("/produtos")
+	@ApiOperation(value = "Listar os produtos")
 	public List<Produto> listar(){
 		return service.findAll();
 	}
 	
 	@GetMapping("/produto/{id}")
+	@ApiOperation(value = "Retornar o produto através do id")
 	public Optional<Produto> getCategoria(@PathVariable(value = "id") Long id){
 		return service.findById(id);
 	}
 	
 	@PutMapping("/produto")
+	@ApiOperation(value = "Alterar o produto")
 	public Produto alterar(@RequestBody Produto produto) {
 		return service.saveOrUpdate(produto);
 	}
 	
 	@DeleteMapping("/produto/{id}")
+	@ApiOperation(value = "Deletar o produto pelo id")
 	public void deletar(@PathVariable(value = "id") Long id) {
 		service.deleteById(id);
 	}
