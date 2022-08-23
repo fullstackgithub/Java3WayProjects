@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { BrowserModule } from '@angular/platform-browser';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
@@ -16,6 +17,7 @@ import { FooterComponent } from './components/template/footer/footer.component';
 import { HomeComponent } from './components/views/home/home.component';
 import { CategoriaComponent } from './components/views/categoria/categoria.component';
 import { ProdutoComponent } from './components/views/produto/produto.component';
+import { CategoriaCreateComponent } from './components/categoria/categoria-create/categoria-create.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,8 @@ import { ProdutoComponent } from './components/views/produto/produto.component';
     FooterComponent,
     HomeComponent,
     CategoriaComponent,
-    ProdutoComponent
+    ProdutoComponent,
+    CategoriaCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,8 @@ import { ProdutoComponent } from './components/views/produto/produto.component';
     MatSidenavModule,
     MatListModule,
     AppRoutingModule,
-    MatCardModule
+    MatCardModule,
+    MatButtonModule
 
   ],
   providers: [],
