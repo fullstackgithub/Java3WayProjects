@@ -21,6 +21,10 @@ const routes: Routes = [
   {
     path: 'categoria/create',
     component:  CategoriaCreateComponent
+  },
+  {
+    path: "categoria/update/:id",
+    component: CategoriaCreateComponent
   }
 ];
 

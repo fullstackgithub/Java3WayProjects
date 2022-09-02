@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,6 +26,7 @@ import { HomeComponent } from './components/views/home/home.component';
 import { CategoriaComponent } from './components/views/categoria/categoria.component';
 import { ProdutoComponent } from './components/views/produto/produto.component';
 import { CategoriaCreateComponent } from './components/categoria/categoria-create/categoria-create.component';
+import { CategoriaReadComponent } from './components/categoria/categoria-read/categoria-read.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { CategoriaCreateComponent } from './components/categoria/categoria-creat
     HomeComponent,
     CategoriaComponent,
     ProdutoComponent,
-    CategoriaCreateComponent
+    CategoriaCreateComponent,
+    CategoriaReadComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +55,10 @@ import { CategoriaCreateComponent } from './components/categoria/categoria-creat
     MatInputModule,
     MatSelectModule,
     MatSnackBarModule,
-    MatTableModule
+    MatTableModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
 
   ],
   providers: [],
