@@ -1,3 +1,4 @@
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
 import { CategoriaCreateComponent } from './components/categoria/categoria-create/categoria-create.component';
 import { ProdutoComponent } from './components/views/produto/produto.component';
 import { CategoriaComponent } from './components/views/categoria/categoria.component';
@@ -25,6 +26,14 @@ const routes: Routes = [
   {
     path: "categoria/update/:id",
     component: CategoriaCreateComponent
+  },
+  {
+    path: "produto/create",
+    component: ProdutoCreateComponent
+  },
+  {
+    path: "produto/update/:id",
+    component: ProdutoCreateComponent
   }
 ];
 
