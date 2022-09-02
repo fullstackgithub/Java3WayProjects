@@ -27,6 +27,8 @@ import { CategoriaComponent } from './components/views/categoria/categoria.compo
 import { ProdutoComponent } from './components/views/produto/produto.component';
 import { CategoriaCreateComponent } from './components/categoria/categoria-create/categoria-create.component';
 import { CategoriaReadComponent } from './components/categoria/categoria-read/categoria-read.component';
+import { ProdutoCreateComponent } from './components/produto/produto-create/produto-create.component';
+import { ProdutoReadComponent } from './components/produto/produto-read/produto-read.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { CategoriaReadComponent } from './components/categoria/categoria-read/ca
     CategoriaComponent,
     ProdutoComponent,
     CategoriaCreateComponent,
-    CategoriaReadComponent
+    CategoriaReadComponent,
+    ProdutoCreateComponent,
+    ProdutoReadComponent
   ],
   imports: [
     BrowserModule,
