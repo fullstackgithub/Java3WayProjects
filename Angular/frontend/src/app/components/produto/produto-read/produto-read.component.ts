@@ -1,4 +1,7 @@
+import { ProdutoService } from './../../../services/produto.service';
 import { Component, OnInit } from '@angular/core';
+import { Produto } from 'src/app/models/produto.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-produto-read',
@@ -7,9 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutoReadComponent implements OnInit {
 
-  constructor() { }
+  produtos: Produto[] = [];
+  displayedColumns: string[] = ["id", "categoria", "nome", "preco", "quantidadeEstoque", "ativo", "actions"];
+
+  constructor(
+    private produtoService: ProdutoService,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
+    this.readProdutos();
   }
+
+ readProdutos(): void{
+  this.produtoService.read().subscribe(produtos => {
+    this.produtos = produtos;
+  });
+ }
 
 }

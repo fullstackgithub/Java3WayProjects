@@ -1,1 +1,59 @@
-<p>produto-read works!</p>
+<div class="mat-elevation-z4">
+  <table mat-table [dataSource]="produtos">
+    <!-- ID Column -->
+    <ng-container matColumnDef="id">
+      <th mat-header-cell *matHeaderCellDef>Id</th>
+      <td mat-cell *matCellDef="let row">{{ row.id }}</td>
+    </ng-container>
+
+    <!-- Categoria Column -->
+    <ng-container matColumnDef="categoria">
+      <th mat-header-cell *matHeaderCellDef>Categoria</th>
+      <td mat-cell *matCellDef="let row">{{ row.categoria.nome }}</td>
+    </ng-container>
+
+    <!-- Nome Column -->
+    <ng-container matColumnDef="nome">
+      <th mat-header-cell *matHeaderCellDef>Nome</th>
+      <td mat-cell *matCellDef="let row">{{ row.nome }}</td>
+    </ng-container>
+
+    <!-- Preço Column -->
+    <ng-container matColumnDef="preco">
+      <th mat-header-cell *matHeaderCellDef class="align-right">Preço</th>
+      <td mat-cell *matCellDef="let row" class="align-right">
+        {{ row.preco | currency: "BRL" }}
+      </td>
+    </ng-container>
+
+    <!-- Quantidade em Estoque Column -->
+    <ng-container matColumnDef="quantidadeEstoque">
+      <th mat-header-cell *matHeaderCellDef class="align-center">Estoque</th>
+      <td mat-cell *matCellDef="let row" class="align-center">
+        {{ row.quantidadeEstoque }}
+      </td>
+    </ng-container>
+
+    <!-- Produto Ativo Column -->
+    <ng-container matColumnDef="ativo">
+      <th mat-header-cell *matHeaderCellDef>Ativo</th>
+      <td mat-cell *matCellDef="let row">{{ row.ativo }}</td>
+    </ng-container>
+
+    <!-- Actions Column -->
+    <ng-container matColumnDef="actions">
+      <th mat-header-cell *matHeaderCellDef>Ações</th>
+      <td mat-cell *matCellDef="let row" class="align-center">
+        <a routerLink="/produto/update/{{ row.id }}" class="edit">
+          <i class="material-icons">edit</i>
+        </a>
+        <a class="delete">
+          <i class="material-icons">delete</i>
+        </a>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+</div>
