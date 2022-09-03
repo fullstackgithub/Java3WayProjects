@@ -16,16 +16,16 @@ export class ProdutoReadComponent implements OnInit {
   constructor(
     private produtoService: ProdutoService,
     private router: Router
-  ) { }
+    ) { }
 
-  ngOnInit(): void {
-    this.readProdutos();
-  }
+    ngOnInit(): void {
+      this.readProdutos();
+    }
 
- readProdutos(): void{
-  this.produtoService.read().subscribe(produtos => {
-    this.produtos = produtos;
-  });
- }
+    readProdutos(): void{
+      this.produtoService.read().subscribe(produtos => {
+        this.produtos = produtos;
+      });
+    }
 
 }
